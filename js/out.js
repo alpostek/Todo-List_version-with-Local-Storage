@@ -117,9 +117,15 @@ document.addEventListener("DOMContentLoaded", function () {
     //       }
 
     var allDoneTasks = document.getElementsByClassName("done");
-    for (var i = 0; i < allDoneTasks.length; i++) {
-      allDoneTasks[i].parentElement.removeChild(allDoneTasks[i]);
-      i--;
+    // for (var i = 0; i<allDoneTasks.length; i++){
+    //   allDoneTasks[i].parentElement.removeChild(allDoneTasks[i])
+    //   i--;
+
+    // for (var i=allDoneTasks.length-1; i>= 0; i--){
+    //   allDoneTasks[i].parentElement.removeChild(allDoneTasks[i])
+    // }
+    while (allDoneTasks.length) {
+      allDoneTasks[0].parentElement.removeChild(allDoneTasks[0]);
     }
     localStorage.todoWorkList = addWorkListHere.innerHTML;
     localStorage.todoEduList = addEduListHere.innerHTML;
