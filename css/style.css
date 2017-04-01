@@ -1,0 +1,82 @@
+
+.bgr{
+  background-color: #D3D3D3;
+}
+
+.main{
+  min-height: 550px;
+  padding-top: 10px;
+}
+
+.header{
+  text-align: center;
+  line-height: 15px;
+  min-height: 30px;
+  background-color: #D3D3D3;
+  padding-bottom: 10px;
+}
+
+.flexy-center{
+  display: flex;
+  justify-content: center;
+}
+
+.mrg{
+  margin: 10px;
+}
+
+.pdg{
+  padding: 10px;
+}
+
+.textcenter{
+  text-align: center;
+}
+
+.flexy-space-betw{
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.flexy-vertical{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.flexy-vertical-center{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.flexy-vertical-betw{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.todo{
+  width: 100%;
+}
+
+.done{
+  text-decoration: line-through;
+}
+
+.btnStyle{
+  margin: 10px;
+}
+
+.helpborder{
+  border: 1px solid red;
+}
+
+#taskcontent{
+  margin-bottom: 10px;
+}
+
+.listclass{
+  list-style-type: none;
+}

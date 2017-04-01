@@ -1,0 +1,119 @@
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="vievport" content="width: device-width, initial-scale=1"></meta>
+    <title>Todo List Project</title>
+    <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/out.js" type="text/javascript"></script>
+</head>
+<body>
+
+    <div class="container-fluid bgr">
+      <div class="row">
+        <div class=".col-md-12 header helpborder">
+        <h1>Things to do</h1>
+        </div>
+      </div>
+      <div class=".col-md-12 main">
+
+        <div class="row flexy-center">
+            <div class="col-md-6 panel panel-default mrgtop">
+              <div class="panel-heading text-center">
+                Work
+                 <i class="glyphicon glyphicon-wrench"></i>
+              </div>
+              <div class="panel-body" id="worktest">
+                <ul id="worklist" class="listclass"></ul>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="row flexy-center">
+            <div class="col-md-6 panel panel-default mrgtop">
+                <div class="panel-heading text-center">
+                    Education
+                    <i class="glyphicon glyphicon-education"></i>
+                </div>
+                <div class="panel-body">
+                  <ul id="edulist" class="listclass"></ul>
+                </div>
+            </div>
+            </div>
+
+            <div class="row flexy-center">
+            <div class="col-md-6 category panel panel-default mrgtop">
+                <div class="panel-heading textcenter">
+                    Exercise
+                    <i class="glyphicon glyphicon-cog"></i>
+                </div>
+                <div class="panel-body">
+                  <ul id="exerciselist" class="listclass"></ul>
+                </div>
+            </div>
+            </div>
+
+        <div class="row flexy-center">
+          <div class="col-md-6 category panel panel-default pad">
+            <div class="panel-heading textcenter">
+              Household duties
+              <i class="glyphicon glyphicon-home"></i>
+            </div>
+            <div class="panel-body">
+              <ul id="householdlist" class="listclass"></ul>
+            </div>
+          </div>
+          </div>
+
+          <div class="row flexy-center">
+          <div class="col-md-6 category panel panel-default">
+            <div class="panel-heading textcenter">
+                Other
+                <i class="glyphicon glyphicon-sunglasses"></i>
+            </div>
+            <div class="panel-body">
+              <ul id="otherlist" class="listclass"></ul>
+            </div>
+          </div>
+          </div>
+
+
+        <div class="row flexy-center">
+          <div class="col-md-6 form-group textcenter">
+
+            <div class="row flexy-space-betw">
+              <div class="col-md-6 helpborder">
+              <h2 class="pdg">Add activity</h2>
+              <label class="pdg">Category</label>
+              <select class="form-control" id="categories">
+                <option value="choose">Choose category</option>
+                <option value= "work">Work</option>
+                <option value="education">Education</option>
+                <option value="exercise">Exercise</option>
+                <option value="household">Household Duties</option>
+                <option value="other">Other</option>
+              </select>
+              <label class="mrg pdg">Type description here</label>
+              <input class="todo" type="text" placeholder="To do..." id="taskcontent"></input>
+              </div>
+
+                  <div class="col-md-6 bordercl flexy-vertical-center helpborder">
+                      <button type="button" class="btn btn-info mrg" id="add">Add task</button>
+                      <button type="button" class="btn btn-danger mrg" id="delete">Delete completed tasks</button>
+                  </div>
+
+                  </div>
+
+              </div>
+          </div>
+        </div>
+
+        </div>
+
+    </div>
+
+
+
+</body>
+</html>
