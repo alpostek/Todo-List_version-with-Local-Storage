@@ -32,20 +32,28 @@ function completeItem(){
 }
 
 function deleteAllCompleted(){
-  var allTasks = document.getElementsByTagName("li");
-  console.log(allTasks)
-      for (var i = 0; i <allTasks.length; i++){
-        if (allTasks[i].className==="done"){
-          console.log(allTasks[i])
-          allTasks[i].parentElement.removeChild(allTasks[i]);
-        }
-      }
-      localStorage.todoWorkList = addWorkListHere.innerHTML;
-      localStorage.todoEduList = addEduListHere.innerHTML;
-      localStorage.todoExList = addExListHere.innerHTML;
-      localStorage.todoHouseList = addHouseListHere.innerHTML;
-      localStorage.todoOtherList = addOtherListHere.innerHTML;
-    }
+  // var allTasks = document.getElementsByTagName("li");
+  // console.log(allTasks)
+  //     for (var i = 0; i <allTasks.length; i++){
+  //       if (allTasks[i].classList.contains("done")){
+  //         console.log(allTasks[i])
+  //         allTasks[i].parentElement.removeChild(allTasks[i]);
+  //         console.log(localStorage)
+  //       }
+
+  var allDoneTasks = document.getElementsByClassName("done")
+  for (var i = 0; i<allDoneTasks.length; i++){
+    allDoneTasks[i].parentElement.removeChild(allDoneTasks[i])
+    i--;
+  }
+  localStorage.todoWorkList = addWorkListHere.innerHTML;
+  localStorage.todoEduList = addEduListHere.innerHTML;
+  localStorage.todoExList = addExListHere.innerHTML;
+  localStorage.todoHouseList = addHouseListHere.innerHTML;
+  localStorage.todoOtherList = addOtherListHere.innerHTML;
+}
+
+
 
 delCmplTask.addEventListener("click", deleteAllCompleted)
 
