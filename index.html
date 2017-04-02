@@ -10,15 +10,18 @@
 <body>
 
     <div class="container-fluid bgr">
-      <div class="row">
-        <div class=".col-md-12 header helpborder">
-        <h1>Things to do</h1>
+      <div class="row headercolor">
+        <div class=".col-md-12 header">
+        <h1>The To-Do List</h1>
         </div>
       </div>
+
       <div class=".col-md-12 main">
 
-        <div class="row flexy-center">
-            <div class="col-md-6 panel panel-default mrgtop">
+        <div class="row">
+
+        <div class="col-md-4 flexy-center">
+            <div class="col-md-4 panel panel-default mrgtop wide">
               <div class="panel-heading text-center">
                 Work
                  <i class="glyphicon glyphicon-wrench"></i>
@@ -30,8 +33,8 @@
 
           </div>
 
-          <div class="row flexy-center">
-            <div class="col-md-6 panel panel-default mrgtop">
+          <div class="col-md-4 flexy-center">
+            <div class="col-md-4 panel panel-default mrgtop wide">
                 <div class="panel-heading text-center">
                     Education
                     <i class="glyphicon glyphicon-education"></i>
@@ -42,8 +45,8 @@
             </div>
             </div>
 
-            <div class="row flexy-center">
-            <div class="col-md-6 category panel panel-default mrgtop">
+            <div class="col-md-4 flexy-center">
+            <div class="col-md-4 category panel panel-default mrgtop wide">
                 <div class="panel-heading textcenter">
                     Exercise
                     <i class="glyphicon glyphicon-cog"></i>
@@ -54,8 +57,13 @@
             </div>
             </div>
 
-        <div class="row flexy-center">
-          <div class="col-md-6 category panel panel-default pad">
+            </div>
+
+
+            <div class="row flexy-space-ar">
+
+        <div class="col-md-4 flexy-center">
+          <div class="col-md-4 category panel panel-default wide">
             <div class="panel-heading textcenter">
               Household duties
               <i class="glyphicon glyphicon-home"></i>
@@ -66,8 +74,8 @@
           </div>
           </div>
 
-          <div class="row flexy-center">
-          <div class="col-md-6 category panel panel-default">
+          <div class="col-md-4 flexy-center">
+          <div class="col-md-4 category panel panel-default wide">
             <div class="panel-heading textcenter">
                 Other
                 <i class="glyphicon glyphicon-sunglasses"></i>
@@ -78,40 +86,46 @@
           </div>
           </div>
 
+          </div>
 
-        <div class="row flexy-center">
-          <div class="col-md-6 form-group textcenter">
-
-            <div class="row flexy-space-betw">
-              <div class="col-md-6 helpborder">
-              <h2 class="pdg">Add activity</h2>
-              <label class="pdg">Category</label>
-              <select class="form-control" id="categories">
-                <option value="choose">Choose category</option>
-                <option value= "work">Work</option>
-                <option value="education">Education</option>
-                <option value="exercise">Exercise</option>
-                <option value="household">Household Duties</option>
-                <option value="other">Other</option>
-              </select>
-              <label class="mrg pdg">Type description here</label>
-              <input class="todo" type="text" placeholder="To do..." id="taskcontent"></input>
-              </div>
-
-                  <div class="col-md-6 bordercl flexy-vertical-center helpborder">
-                      <button type="button" class="btn btn-info mrg" id="add">Add task</button>
-                      <button type="button" class="btn btn-danger mrg" id="delete">Delete completed tasks</button>
-                  </div>
-
-                  </div>
-
-              </div>
+        <div class="row flexy-center seccolor whitebor">
+          <div class="col-md-6 form-group textcenter helpborder margin">
+            <h1 class="pdg activity">Add new activity</h1>
           </div>
         </div>
 
-        </div>
+          <div class="row seccolor flexy-center">
+            <div class="col-md-6 flexy-space-ar textcenter">
+              <label class="pdg helpborder activity">Category</label>
+                <label class="pdg helpborder activity">Type description here</label>
+              </div>
+            </div>
 
-    </div>
+            <div class="row seccolor flexy-center">
+              <div class="col-md-6 flexy-center">
+                <select class="form-control mrg" id="categories">
+                  <option value="choose">Choose category</option>
+                  <option value= "work">Work</option>
+                  <option value="education">Education</option>
+                  <option value="exercise">Exercise</option>
+                  <option value="household">Household Duties</option>
+                  <option value="other">Other</option>
+                </select>
+
+                <input class="todo mrg" type="text" placeholder="To do..." id="taskcontent"></input>
+
+                </div>
+            </div>
+
+          <div class="row seccolor flexy-center">
+            <div class="col-md-6 flexy-vertical-center flexy-align helpborder">
+                <button type="button" class="btn btn-info mrg btnsize" id="add">Add task</button>
+                <button type="button" class="btn btn-danger mrg btnsize" id="delete">Delete completed tasks</button>
+            </div>
+          </div>
+
+              </div>
+          </div>
 
 
 
