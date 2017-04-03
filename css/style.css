@@ -1,10 +1,13 @@
+*{
+  font-family: "Roboto", sans-serif;
+}
 
 .bgr{
-  background-color:#B0B0B0;
+  /*background-color:#B0B0B0;*/
+  background-color: #C5E1A5;
 }
 
 .main{
-  min-height: 550px;
   padding-top: 10px;
 }
 
@@ -26,11 +29,19 @@
 }
 
 .pdg{
-  padding: 10px;
+  padding: 8px;
 }
 
+/*.pgdtwo{
+  padding: 20px;
+}*/
+
 .pdgtopselect{
-  padding-top: 20px;
+  padding-top: 15px;
+}
+
+.pdgbottom{
+  padding-bottom: 20px;
 }
 
 .textcenter{
@@ -84,6 +95,11 @@
   margin: 10px;
 }
 
+.checkStyle{
+  /*margin: 10px;*/
+  color: green;
+}
+
 .wide{
   width: 100%;
 }
@@ -106,13 +122,13 @@
 }
 
 .headercolor{
-  background-color: #00C851;
-  border-bottom: 3px solid white;
+  /*background-color: #00C851;*/
+  background-color: #8BC34A;
+  border-bottom: 5px solid #9CCC65;
 }
 
 .seccolor{
-  background-color: #ffbb33;
-  margin-bottom: 0;
+  background-color: #8BC34A;
 }
 
 .activity{
@@ -120,5 +136,35 @@
 }
 
 .whitebor{
-  border-top: 3px solid white;
+  border-top: 5px solid #9CCC65;
+}
+
+.height{
+  height: 100%;
+}
+
+.help{
+  margin: 0 auto;
+  padding: 0 auto;
+}
+
+.mainheight{
+  min-height: 280px;
+}
+
+.mrgtop{
+  margin-top: 15px;
+}
+
+.panel-default > .panel-heading {
+  background-color: #8BC34A;
+}
+
+
+@media(max-width: 992px){
+  #delete {height: 70px; white-space: normal;}
+}
+
+.btn_active{
+  background-color: #76FF03;
 }

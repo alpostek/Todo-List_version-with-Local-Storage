@@ -125,12 +125,17 @@ document.addEventListener("DOMContentLoaded", function () {
   addTask.addEventListener("click", function () {
 
     //tworzymy guziki complete i delete
+    // var completeTaskBtn = document.createElement("button");
+    // completeTaskBtn.innerText= "Complete";
+    // completeTaskBtn.className = "btn btn-success btnStyle";
     var completeTaskBtn = document.createElement("button");
-    completeTaskBtn.innerText = "Complete";
-    completeTaskBtn.className = "btn btn-success btnStyle";
+    completeTaskBtn.className = "fa fa-check text-success btnStyle";
+    // completeTaskBtn.className ="checkStyle";
+
     var deleteTaskBtn = document.createElement("button");
-    deleteTaskBtn.innerText = "Delete";
-    deleteTaskBtn.className = "btn btn-danger btnStyle";
+    // deleteTaskBtn.innerText = "Delete";
+    // deleteTaskBtn.className = "btn btn-danger btnStyle";
+    deleteTaskBtn.className = "fa fa-times text-danger btnStyle";
 
     //dodajemy im moce
     completeTaskBtn.addEventListener("click", completeItem);
@@ -184,12 +189,12 @@ document.addEventListener("DOMContentLoaded", function () {
   if (localStorage.todoWorkList !== undefined) {
     addWorkListHere.innerHTML = localStorage.todoWorkList;
     //dodajemy na nowo możliwość kasowania do guzikow
-    var btnsDel = addWorkListHere.getElementsByClassName("btn-danger");
+    var btnsDel = addWorkListHere.getElementsByClassName("text-danger");
     for (var i = 0; i < btnsDel.length; i++) {
       btnsDel[i].addEventListener("click", removeItem);
     }
     //dodajemy na nowo możliwość "complete" do guzików
-    var btnsComplete = addWorkListHere.getElementsByClassName("btn-success");
+    var btnsComplete = addWorkListHere.getElementsByClassName("text-success");
     for (var i = 0; i < btnsComplete.length; i++) {
       btnsComplete[i].addEventListener("click", completeItem);
     }
@@ -197,11 +202,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (localStorage.todoEduList !== undefined) {
     addEduListHere.innerHTML = localStorage.todoEduList;
-    var btnsDel = addEduListHere.getElementsByClassName("btn-danger");
+    var btnsDel = addEduListHere.getElementsByClassName("text-danger");
     for (var i = 0; i < btnsDel.length; i++) {
       btnsDel[i].addEventListener("click", removeItem);
     }
-    var btnsComplete = addEduListHere.getElementsByClassName("btn-success");
+    var btnsComplete = addEduListHere.getElementsByClassName("text-success");
     for (var i = 0; i < btnsComplete.length; i++) {
       btnsComplete[i].addEventListener("click", completeItem);
     }
@@ -209,11 +214,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (localStorage.todoExList !== undefined) {
     addExListHere.innerHTML = localStorage.todoExList;
-    var btnsDel = addExListHere.getElementsByClassName("btn-danger");
+    var btnsDel = addExListHere.getElementsByClassName("text-danger");
     for (var i = 0; i < btnsDel.length; i++) {
       btnsDel[i].addEventListener("click", removeItem);
     }
-    var btnsComplete = addExListHere.getElementsByClassName("btn-success");
+    var btnsComplete = addExListHere.getElementsByClassName("text-success");
     for (var i = 0; i < btnsComplete.length; i++) {
       btnsComplete[i].addEventListener("click", completeItem);
     }
@@ -221,11 +226,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (localStorage.todoHouseList !== undefined) {
     addHouseListHere.innerHTML = localStorage.todoHouseList;
-    var btnsDel = addHouseListHere.getElementsByClassName("btn-danger");
+    var btnsDel = addHouseListHere.getElementsByClassName("text-danger");
     for (var i = 0; i < btnsDel.length; i++) {
       btnsDel[i].addEventListener("click", removeItem);
     }
-    var btnsComplete = addHouseListHere.getElementsByClassName("btn-success");
+    var btnsComplete = addHouseListHere.getElementsByClassName("text-success");
     for (var i = 0; i < btnsComplete.length; i++) {
       btnsComplete[i].addEventListener("click", completeItem);
     }
@@ -233,11 +238,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (localStorage.todoOtherList !== undefined) {
     addOtherListHere.innerHTML = localStorage.todoOtherList;
-    var btnsDel = addOtherListHere.getElementsByClassName("btn-danger");
+    var btnsDel = addOtherListHere.getElementsByClassName("text-danger");
     for (var i = 0; i < btnsDel.length; i++) {
       btnsDel[i].addEventListener("click", removeItem);
     }
-    var btnsComplete = addOtherListHere.getElementsByClassName("btn-success");
+    var btnsComplete = addOtherListHere.getElementsByClassName("text-success");
     for (var i = 0; i < btnsComplete.length; i++) {
       btnsComplete[i].addEventListener("click", completeItem);
     }
