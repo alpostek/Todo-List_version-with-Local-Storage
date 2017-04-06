@@ -13,6 +13,31 @@
 
     <div class="container-fluid bgr">
 
+      <div id="modalTask" class="modal modal-to-close">
+        <div class="col-md-4 modal-content col-centered flexy-vertical-center">
+            <div class="col-md-12 modal-header">
+                <i class="fa fa-times close" aria-hidden="true"></i>
+            </div>
+            <div class="col-md-12 modal-text">
+                <p>Please describe your task</p>
+            </div>
+        </div>
+
+      </div>
+
+
+      <div id="modalCategory" class="modal modal-to-close">
+        <div class="col-md-4 modal-content col-centered flexy-vertical-center">
+            <div class="col-md-12 modal-header">
+                <i class="fa fa-times close" aria-hidden="true"></i>
+            </div>
+            <div class="col-md-12 modal-text">
+                <p>Choose category</p>
+            </div>
+        </div>
+
+      </div>
+
       <div class="row headercolor">
         <div class=".col-md-12 header">
         <h1>The To-Do List</h1>
@@ -63,7 +88,7 @@
             </div>
 
 
-            <div class="row flexy-space-ar">
+            <div class="row flexy-space-ar secondrow">
 
         <div class="col-md-4 flexy-center">
           <div class="col-md-4 category panel panel-default wide mrgtop">
@@ -125,8 +150,9 @@
                     </div>
                 </div>
 
-              <div class="row seccolor flexy-center pgdtwo">
-                <div class="col-md-6 flexy-vertical-center flexy-align helpborder">
+                <div class="row seccolor flexy-center pgdtwo">
+                <!-- <div class="col-md-6 flexy-vertical-center flexy-align helpborder"> -->
+                  <div class="col-md-6 flexy-space-ar flexy-align helpborder seccolor">
                     <button type="button" class="btn btn_active mrg btnsize" id="add">Add task <i class="fa fa-plus" aria-hidden="true"></i> </button>
                     <button type="button" class="btn btn_active mrg btnsize" id="delete">Delete completed tasks <i class="fa fa-trash" aria-hidden="true"></i> </button>
                 </div>

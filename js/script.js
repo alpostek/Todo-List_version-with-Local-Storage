@@ -2,15 +2,21 @@ document.addEventListener("DOMContentLoaded", function() {
   //definiowanie guzikow
  var addTask = document.getElementById("add");
  var delCmplTask = document.getElementById("delete");
+
  //definiowanie kolejnych list
  var addWorkListHere = document.getElementById("worklist");
  var addEduListHere = document.getElementById("edulist");
  var addExListHere = document.getElementById("exerciselist");
  var addHouseListHere = document.getElementById("householdlist");
  var addOtherListHere = document.getElementById("otherlist")
+
  //definiowanie selecta
  var selectCategory = document.getElementById("categories");
  var category = document.getElementById("categories").value;
+
+
+ //definiowanie modals = okienek pop-up o błędzie
+ var modals = document.getElementsByClassName("modal");
 
 //definiujemy funkcje do guzikow dodawanych do zadania
 function removeItem(){
@@ -45,24 +51,35 @@ function deleteAllCompleted(){
   localStorage.todoOtherList = addOtherListHere.innerHTML;
 }
 
+//funkcja zamykająca modals
+ function closeModal(){
+   for (var i = 0; i<modals.length; i++){
+     modals[i].style.display = "none"
+     }
+   }
 
 
 delCmplTask.addEventListener("click", deleteAllCompleted)
 
+//zamykanie modals po kliknięciu poza okno komunikatu
+ for (var i=0; i<modals.length; i++){
+   modals[i].addEventListener("click", closeModal)
+ }
+//zamykanie modal po kliknięciu w "x"
+ var close = document.getElementsByClassName("close");
+ for (var i = 0; i <close.length; i++){
+   close[i].addEventListener("click", closeModal)
+ }
+
+
 
  addTask.addEventListener("click", function(){
 
-   //tworzymy guziki complete i delete
-  // var completeTaskBtn = document.createElement("button");
-  // completeTaskBtn.innerText= "Complete";
-  // completeTaskBtn.className = "btn btn-success btnStyle";
+   //tworzymy guziki complete i delete które pojawiają się przy "li"
   var completeTaskBtn = document.createElement("button");
   completeTaskBtn.className = "fa fa-check text-success btnStyle";
-  // completeTaskBtn.className ="checkStyle";
 
   var deleteTaskBtn = document.createElement("button");
-  // deleteTaskBtn.innerText = "Delete";
-  // deleteTaskBtn.className = "btn btn-danger btnStyle";
   deleteTaskBtn.className = "fa fa-times text-danger btnStyle";
 
   //dodajemy im moce
@@ -75,11 +92,13 @@ delCmplTask.addEventListener("click", deleteAllCompleted)
    var taskText = document.getElementById("taskcontent").value;
    taskToAdd.innerText = taskText;
    var listToAdd;
+   var chooseCategory = document.getElementById("modalCategory")
 
 //wybieramy liste gdzie adanie ma byc dodane
     if (taskText.length > 0){
     switch(selectCategory.selectedIndex){
-      case 0: alert("Choose category");
+      // case 0: alert("Choose category");
+      case 0: chooseCategory.style.display= "block";
       break;
       case 1: listToAdd = addWorkListHere;
       break;
@@ -98,10 +117,10 @@ delCmplTask.addEventListener("click", deleteAllCompleted)
     listToAdd.appendChild(taskToAdd)
 
   } else if (taskText.length<=0){
-        alert("Please describe your task")
+        // alert("Please describe your task")
+        var modalTask = document.getElementById("modalTask");
+        modalTask.style.display = "block"
       }
-
-
 
 //zapisujemy wszystkie listy do localstorage
     localStorage.todoWorkList = addWorkListHere.innerHTML;

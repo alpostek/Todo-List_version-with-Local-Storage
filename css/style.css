@@ -122,7 +122,6 @@
 }
 
 .headercolor{
-  /*background-color: #00C851;*/
   background-color: #8BC34A;
   border-bottom: 5px solid #9CCC65;
 }
@@ -149,11 +148,11 @@
 }
 
 .mainheight{
-  min-height: 280px;
+  min-height: 330px;
 }
 
 .mrgtop{
-  margin-top: 15px;
+  margin-top: 25px;
 }
 
 .panel-default > .panel-heading {
@@ -163,8 +162,74 @@
 
 @media(max-width: 992px){
   #delete {height: 70px; white-space: normal;}
+  .secondrow {display: flex; flex-direction: column; justify-content: center;}
 }
 
 .btn_active{
   background-color: #76FF03;
+  outline-color: #76FF03;
+  margin-bottom: 9px;
+}
+
+.btn_active:active{
+  box-shadow: 0 3px 0 0 #9CCC65;
+}
+
+.btn_active:hover{
+  font-size: 16px;
+}
+
+.panel:hover{
+  box-shadow: 0 4px 0 0 #9CCC65;
+}
+
+.panel-heading:hover{
+  font-size: 18px;
+}
+
+.modal{
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content{
+  background-color: #AED581;
+  margin: 10% auto;
+  padding: 0;
+  border: 3px solid #DCEDC8;
+  text-align: center;
+  display: flex;
+  min-height: 8%;
+}
+
+.modal-text{
+  margin-top: 10px;
+}
+
+.modal-header{
+background-color: #33691E;
+min-height: 4%;
+line-height: 10px;
+padding: 2px 16px;
+}
+
+.col-centered{
+    float: none;
+    margin: 15% auto;
+}
+
+.close{
+  float: right;
+  font-weight: bold;
+  color: #76FF03;
+  /*margin-top: 3px;
+  font-size: 30px;*/
 }
