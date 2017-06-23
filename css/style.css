@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
+  font-size: 16px;
 }
 
 .bgr{
@@ -82,7 +83,6 @@
 
 .todo{
   width: 100%;
-  min-height: 35px;
   border-radius: 5px;
 }
 
